@@ -22,7 +22,8 @@ To use the script, follow these steps:
    git clone git@github.com:vm32/Firewall-Rule-Management-Script.git
    chmod +x firewall_rules.sh
    sudo ./firewall_rules.sh
-  
+  ![image](https://github.com/vm32/Firewall-Rule-Management-Script/assets/21219411/b8e42372-a53c-4900-a1ed-ffe89d782abe)
+
 # Compatible Linux Distributions
 
 The iptables management script is compatible with a wide range of Linux distributions that support iptables and have a Bash shell environment. Below is a list of some popular distributions where the script should work without issues:
