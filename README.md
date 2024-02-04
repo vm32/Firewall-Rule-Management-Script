@@ -49,5 +49,6 @@ This list includes distributions that are known to support iptables and Bash, bu
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=vm32/Linux-Incident-Response,vm32/Firewall-Rule-Management-Script&type=Date)](https://star-history.com/#vm32/Linux-Incident-Response&vm32/Firewall-Rule-Management-Script&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=vm32/Firewall-Rule-Management-Script&type=Date)](https://star-history.com/#vm32/Firewall-Rule-Management-Script&Date)
+
 
