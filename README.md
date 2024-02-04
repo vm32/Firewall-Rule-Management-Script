@@ -47,3 +47,7 @@ Before running the script, ensure that `iptables` is installed and that you have
 
 This list includes distributions that are known to support iptables and Bash, but it's not exhaustive. The script may work on other distributions that meet these requirements. Always ensure that your system is up-to-date and has the necessary permissions to modify iptables rules.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=vm32/Linux-Incident-Response,vm32/Firewall-Rule-Management-Script&type=Date)](https://star-history.com/#vm32/Linux-Incident-Response&vm32/Firewall-Rule-Management-Script&Date)
+
