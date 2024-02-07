@@ -6,11 +6,11 @@ function list_rules() {
     echo -e "${GREEN}Current iptables rules:${NC}"
     echo "---------------------------------------------"
     iptables -L --line-numbers -n -v | while IFS= read -r line; do
-        if [[ $line =~ ^Chain ]]; then
+        if [[ "${line}" =~ ^Chain ]]; then
             echo -e "${RED}$line${NC}"
             echo "---------------------------------------------"
         else
-            echo "$line"
+            echo "${line}"
         fi
     done
     echo "---------------------------------------------"
@@ -23,22 +23,22 @@ function add_rule() {
     read -p "Enter the port number: " port
     read -p "Enter the action (ACCEPT, DROP, REJECT): " action
 
-    if ! [[ $port =~ ^[0-9]+$ ]]; then
+    if ! [[ "${port}" =~ ^[0-9]+$ ]]; then
         echo -e "${RED}Error: Port must be a number.${NC}"
         return
     fi
-    iptables -A "$chain" -p "$protocol" --dport "$port" -j "$action"
+    iptables -A "${chain}" -p "${protocol}" --dport "${port}" -j "${action}"
     echo -e "${GREEN}Rule added successfully.${NC}"
 }
 
 function delete_rule() {
     read -p "Enter the chain (INPUT, FORWARD, OUTPUT) from which to delete the rule: " chain
     read -p "Enter the rule number to delete: " rule_number
-    if ! [[ $rule_number =~ ^[0-9]+$ ]]; then
+    if ! [[ "${rule_number}" =~ ^[0-9]+$ ]]; then
         echo -e "${RED}Error: Rule number must be a number.${NC}"
         return
     fi
-    iptables -D "$chain" "$rule_number"
+    iptables -D "${chain}" "${rule_number}"
     echo -e "${GREEN}Rule deleted successfully.${NC}"
 }
 
@@ -51,7 +51,7 @@ function main_menu() {
     echo "4. Exit"
     read -p "Enter your choice [1-4]: " choice
 
-    case $choice in
+    case "${choice}" in
         1)
             list_rules
             ;;
